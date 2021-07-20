@@ -1,0 +1,23 @@
+{
+  "name": "p6-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "prueba.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node prueba.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielMolina1990/p6-back.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielMolina1990/p6-back/issues"
+  },
+  "homepage": "https://github.com/DanielMolina1990/p6-back#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
