@@ -1,16 +1,17 @@
-
+//suministrar los datos
+let productos =[{name: "papitas"}, {name: "agua"}];
 
 //Importamos el paquete
-const express = require('express')
+const express = require('express');
 
 //Generamos la aplicacion de express
-const app = express()
-
+const app = express();
+ 
 //configurasion 
 app.use(express.json());
 
 //Configuramos el metodo
-const port = 3000
+const port = 3000;
 
 //Definicion de rutas o enpoints (mtodo, URI, funvion)
 
@@ -37,9 +38,10 @@ app.put("/productos/ :name", (res, req) =>{
     console.log(req.params);
     const actualizacion = req.body;
     const nombreProducto = req.params.name;
-    const posicionProducto = productos.findIndex( (producto) => )
-
-})
+    const posicionProducto = productos.findIndex( (producto) => productos.name === nombreDeProducto);
+    productos[posicionProducto] = actualizacion;
+    res.send(productos[posicionProducto]);
+});
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
