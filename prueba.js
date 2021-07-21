@@ -1,9 +1,44 @@
+
+
+//Importamos el paquete
 const express = require('express')
+
+//Generamos la aplicacion de express
 const app = express()
+
+//configurasion 
+app.use(express.json());
+
+//Configuramos el metodo
 const port = 3000
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
+//Definicion de rutas o enpoints (mtodo, URI, funvion)
+
+app.get('/productos', (req, res) => {
+  res.send(productos)
+});
+
+app.post("/productos", (req, res) => {
+    console.log(req.body);
+    const nombreProducto = req.body.name;
+    productos.push(nuevoProducto);
+    res.send(nuevoProducto);
+});
+
+app.delete("/productos", (req, res) => {
+    console.log(req.body);
+    const nombreProducto = req.body.name;
+    productos = productos.filter((producto) => producto.name !== nombreProducto);
+    res.send(productos);
+});
+
+app.put("/productos/ :name", (res, req) =>{
+    console.log(req.body);
+    console.log(req.params);
+    const actualizacion = req.body;
+    const nombreProducto = req.params.name;
+    const posicionProducto = productos.findIndex( (producto) => )
+
 })
 
 app.listen(port, () => {
